@@ -20,7 +20,7 @@ A Node.js tool that scrapes architecture documentation from [Google's CodeWiki](
 ## Installation
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/ak-asu/download-codewiki.git
 cd download-codewiki
 npm install
 ```
