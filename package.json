@@ -1,16 +1,38 @@
 {
-  "name": "learn-playwright",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "name": "download-codewiki",
+  "version": "2.0.0",
+  "description": "Download Google CodeWiki documentation as clean Markdown with Mermaid diagrams",
+  "type": "module",
+  "main": "src/index.js",
+  "bin": {
+    "download-codewiki": "bin/download-codewiki.js"
   },
-  "keywords": [],
-  "author": "",
+  "exports": {
+    ".": "./src/index.js",
+    "./dot-to-mermaid": "./src/dot-to-mermaid.js"
+  },
+  "scripts": {
+    "test": "node --test \"test/**/*.test.js\"",
+    "start": "node bin/download-codewiki.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "codewiki",
+    "markdown",
+    "mermaid",
+    "graphviz",
+    "documentation",
+    "github"
+  ],
   "license": "ISC",
-  "type": "commonjs",
   "dependencies": {
-    "playwright": "^1.59.1"
+    "github-slugger": "^2.0.0"
+  },
+  "devDependencies": {
+    "dompurify": "^3.2.0",
+    "jsdom": "^25.0.0",
+    "mermaid": "^11.4.0"
   }
 }
